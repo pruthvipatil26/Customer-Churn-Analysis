@@ -213,7 +213,7 @@ hr {
 # =====================================================
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data\churn_dataset (1).csv")
+    df = pd.read_csv("data/churn_dataset (1).csv")
     df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
     df['TotalCharges'].fillna(df['TotalCharges'].median(), inplace=True)
     df.drop_duplicates(inplace=True)
